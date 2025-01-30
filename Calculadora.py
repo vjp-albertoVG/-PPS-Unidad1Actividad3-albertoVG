@@ -13,14 +13,17 @@ def multiplicacion(a, b):
     return a * b
 
 def division(a, b):
-    if not mayorcero(b):
+    if not mayorCero(b):
         print ("El divisor debe de ser mayor que cero")
         return False
-    else:    
-        return a / b
+    else: 
+        resultado = a / b
+        return resultado
 
 def isNumber(value):
     """Devuelve True si el valor es un número, False en caso contrario."""
+    if value is None:
+        return False
     try:
         float(value)
         return True
